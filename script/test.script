@@ -1,0 +1,4 @@
+init func_Square 1020
+init func_Terminal 1021
+map func_Square func_Terminal
+key func_Square
