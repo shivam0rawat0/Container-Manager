@@ -55,15 +55,12 @@ public class App {
 	}
 
 	public static void readScript(String sname) {
-		BufferedReader reader;
+		Scanner reader;
 		try {
-			reader = new BufferedReader(new FileReader("script/" + sname + ".script"));
-			String line = null;
-			do {
-				line = reader.readLine();
-				if (line != null)
-					runCommand(line);
-			} while (line != null);
+			reader = new Scanner(new File("script/" + sname + ".script"));
+			while(reader.hasNextLine()) {
+				runCommand(reader.nextLine());
+			}
 			reader.close();
 		} catch (Exception e) {
 			print("[ERROR] [" + sname + "] script not found");
