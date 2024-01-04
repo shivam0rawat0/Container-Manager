@@ -1,13 +1,19 @@
 # Container-Manager
 A java application for quicky launching basic servers, mapped for single function.
 
-The CLI commands are as follows:
-To start a container run: <code>init container_name port</code>
+## CLI commands:
 
-Get the generated API key of a container: <code>key container_name</code>
+1. To start a container:
+<code>init container_name port</code>
 
-To map a containerA to containerB: <code>map containerA contaierB</code>
+2. Get API key for a container:
+<code>key container_name</code>
 
-To map a container output to standard output: <code>-map container_name</code>
+3. To map a containerA to containerB:
+<code>map containerA contaierB</code>
 
-To load a script: <code>load script_name</code>
+4. To map a container output to standard reponse:
+<code>-map container_name</code>
+
+5. To load a script:
+<code>load script_name</code>
