@@ -63,6 +63,10 @@ public class Container {
 		consumer.decouple();
 	}
 
+	public void stop(){
+		server.stop(1);
+	}
+
 	private void register() {
 		HttpClient httpClient = HttpClient.newHttpClient();
 

@@ -1,7 +1,5 @@
 import java.util.Scanner;
 import java.io.File;
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.lang.reflect.Constructor;
 import functions.*;
 import lib.*;
@@ -45,6 +43,9 @@ public class App {
 			case "load":
 				readScript(verb[1]);
 				break;
+			case "stop":
+				stopContainer(verb[1]);
+				break;
 			case "exit":
 			case "quit":
 				return false;
@@ -80,6 +81,10 @@ public class App {
 		} catch (Exception e) {
 			print("[ERROR] [" + functionName + "] function not found");
 		}
+	}
+
+	public static void stopContainer(String fn1) {
+		cf.stopContainer(fn1);
 	}
 
 	public static void getAPIKey(String functionName) {
